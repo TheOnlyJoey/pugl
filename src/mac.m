@@ -357,6 +357,17 @@ dispatchCurrentChildViewConfiguration(PuglView* const view)
   return YES;
 }
 
+- (BOOL) becomeFirstResponder
+{
+    BOOL ret = [self acceptsFirstResponder];
+    return ret;
+}
+- (BOOL) resignFirstResponder
+{
+    BOOL ret = [self acceptsFirstResponder];
+    return ret;
+}
+
 - (BOOL)acceptsFirstResponder
 {
   return YES;
